@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #faf7f1;
+  --paper-raised: #ffffff;
+  --ink: #201c16;
+  --ink-soft: #6b6355;
+  --line: #e6ddcc;
+  --navy: #1c2440;
+  --navy-soft: #21326e;
+  --amber: #e19a3c;
+  --amber-ink: #7a4a0c;
+  --teal: #2f6f63;
+  --teal-soft: #e3ede9;
+  --coral: #c85a44;
+  --coral-soft: #f7e6e1;
+}
+
+.dark {
+  --paper: #14171f;
+  --paper-raised: #1b1f2a;
+  --ink: #ede8dd;
+  --ink-soft: #a29c8c;
+  --line: #2c3140;
+  --navy: #0f1424;
+  --navy-soft: #1b2138;
+  --amber: #e8ad5c;
+  --amber-ink: #f3d19b;
+  --teal: #4f9c8c;
+  --teal-soft: #1c2a26;
+  --coral: #dd7a63;
+  --coral-soft: #2b1e1c;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-navy: var(--navy);
+  --color-navy-soft: var(--navy-soft);
+  --color-amber: var(--amber);
+  --color-amber-ink: var(--amber-ink);
+  --color-teal: var(--teal);
+  --color-teal-soft: var(--teal-soft);
+  --color-coral: var(--coral);
+  --color-coral-soft: var(--coral-soft);
+  --font-inter: var(--font-inter);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--navy);
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
