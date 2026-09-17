@@ -141,8 +141,7 @@ function DashboardBody() {
 function TutorDashboardGate() {
   const { user } = useAppSelector((s) => s.auth);
 
-  // /api/me/ tells us directly whether a tutor profile exists and
-  // whether it's approved — no need to guess from a failed request.
+  
   if (!user?.has_tutor_profile || !user.tutor_approved) {
     return <TutorProfileForm />;
   }
